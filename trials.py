@@ -64,13 +64,46 @@ def censor_vowels(word):
 
 def snake_to_camel(string):
     """Given a string in snake case, return a string in camel case"""
-    pass
-    # camelCase = []
+    #snakecase= snake_case camelcase = camelCaseBro
+    #check that string exists
+    if not string:
+        return string
+        #if not, return the string
 
-    # for char, i in string:
-    #     if string[i] == ''
+    #create empty string var
+    only_camel = ''
+
+    #loop over given string use i for index
+    for char in string:
+        #boolean true if '_' spotted at past position, false if current char is lett
+        spotted = False
+
+        #if current char is a "_"
+        if char == '_':
+            #set bool equal to true
+            print(char)
+            spotted = True
+        #else
+        else:
+            #check if bool is true
+            print(char, spotted)
+            if spotted:
+                #capitalize current letter & add to string
+                print(char.upper())
+                only_camel += char.upper()
+            #else
+            else:
+                #add char to string
+                only_camel += char
+                #set bool to false(uneccesary?)
+                spotted = False
+    return only_camel
+    
 
     # for word in string.pop()
+
+print(snake_to_camel('this_is_snake'))
+print(snake_to_camel('this_is_snake_so_is_this'))
 
 def longest_word_length(words):
     biggest = words[0]
