@@ -73,34 +73,16 @@ def snake_to_camel(string):
     #create empty string var
     only_camel = ''
 
-    #loop over given string use i for index
-    for char in string:
-        #boolean true if '_' spotted at past position, false if current char is lett
-        spotted = False
-
-        #if current char is a "_"
-        if char == '_':
-            #set bool equal to true
-            print(char)
-            spotted = True
-        #else
-        else:
-            #check if bool is true
-            print(char, spotted)
-            if spotted:
-                #capitalize current letter & add to string
-                print(char.upper())
-                only_camel += char.upper()
-            #else
-            else:
-                #add char to string
-                only_camel += char
-                #set bool to false(uneccesary?)
-                spotted = False
+    #create arr var to hold arr of string words split on'_'
+    arr_of_str = string.split('_')
+    #loop over arr of str words
+    for word in arr_of_str:
+        #add current word with the first letter capitalized to only_camel
+        only_camel += word.capitalize()
+    #return camel str
     return only_camel
-    
 
-    # for word in string.pop()
+    # for word in string.pop('')
 
 print(snake_to_camel('this_is_snake'))
 print(snake_to_camel('this_is_snake_so_is_this'))
