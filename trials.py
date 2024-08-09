@@ -108,3 +108,28 @@ def has_balanced_parens(string):
 
 def compress(string):
     pass  # TODO: replace this line with your code
+
+#given two strings return third string that contains odd index items from 1st lst
+#and even index items fron 2nd lst
+def mix_lists(list_1, list_2):
+    #create empty lst to hold odd indexs items from list 1
+    odd = []
+    #create empty lst to even index items from lst 2
+    even = []
+    #loop over lst 1 using enumerate
+    for i, num in enumerate(list_1):
+        #if index is not even using modulu
+        if i % 2 != 0:
+            #add to odd lst
+            odd.append(num)
+    #loop over lst_2 using enumerate
+    for j, num_2 in enumerate(list_2):
+        #if index is even
+        if j % 2 == 0:
+            #add to even lst
+            even.append(num_2)
+
+    #return third lst
+    return (odd + even)
+
+print(mix_lists([0, 1, 2, 3, 4], [0, 9, 8, 7, 6]))
