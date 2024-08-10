@@ -133,3 +133,13 @@ def mix_lists(list_1, list_2):
     return (odd + even)
 
 print(mix_lists([0, 1, 2, 3, 4], [0, 9, 8, 7, 6]))
+
+
+def chop_and_attach(list_1):
+    new_lst = [0, 1, 2, 3, 4, 5, 4, 5, 6, 7]
+    list_1[2] = list_1[4]
+    list_1[-1] = list_1[4]
+    list_1.pop(list_1[4])
+    return list_1
+
+print(chop_and_attach([0, 1, 2, 3, 4, 5, 6]))
