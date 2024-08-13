@@ -143,3 +143,26 @@ def chop_and_attach(list_1):
     return list_1
 
 print(chop_and_attach([0, 1, 2, 3, 4, 5, 6]))
+
+
+#swap first & last element of a list
+
+#define function that takes in lst as parameter
+def swap(listy):
+#create var to hold list at index 0
+    value_at_one = listy[0]
+#create var to hold list at index -1
+    value_at_end = listy[-1]
+#pop list at end
+    listy.pop()
+#pop list at begin
+    listy.pop(0)
+#put index 0 value at end place
+    print(value_at_end, value_at_one)
+    listy.append(value_at_one)
+#put index -1 value at first place
+    listy.insert(0, value_at_end)
+#return list
+    return listy
+
+print(swap([0, 1, 9, 2]))
