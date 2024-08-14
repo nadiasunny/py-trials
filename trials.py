@@ -97,10 +97,10 @@ def longest_word_length(words):
     
 print(longest_word_length(['I', 'am', 'cool', 'my', 'man', 'coooool']))
 
-
+#given string that hass trailing space, return only string
 def truncate(string):
-    pass  # TODO: replace this line with your code
-
+    # return string with everything on right side removed
+    return string.rstrip()
 
 def has_balanced_parens(string):
     pass  # TODO: replace this line with your code
