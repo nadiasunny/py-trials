@@ -166,3 +166,17 @@ def swap(listy):
     return listy
 
 print(swap([0, 1, 9, 2]))
+
+
+# given teo int nums. return product if is = or < than 1000
+#else return sum
+#declare function
+def product_or_sum(num_1, num_2):
+#if product of nums is over 1000
+    if num_1*num_2 <= 1000:
+        return num_1*num_2
+    else:
+        return num_2+num_1
+#then return sum of nums
+#else return prod
+print(product_or_sum(10, 200))
